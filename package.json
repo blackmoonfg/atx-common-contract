@@ -1,0 +1,48 @@
+{
+    "name": "bmc-atx-client",
+    "version": "0.0.1",
+    "description": "## ATx pre-Alpha",
+    "main": "truffle.js",
+    "scripts": {
+        "test:all": "./node_modules/truffle/build/cli.bundled.js test test/atx/*",
+        "compile": "./node_modules/truffle/build/cli.bundled.js compile",
+        "compile:all": "./node_modules/truffle/build/cli.bundled.js compile --all",
+        "migrate": "./node_modules/truffle/build/cli.bundled.js migrate",
+        "migrate:reset": "./node_modules/truffle/build/cli.bundled.js migrate --reset",
+        "console": "./node_modules/truffle/build/cli.bundled.js console --network development",
+        "testrpc": "./node_modules/ganache-cli/build/cli.node.js -g 1 --gasLimit 4700000 --trace_request true | grep -Ev \"FilterSubprovider|eth_getFilterChanges\""
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/bfg-dev/atx-contract-client.git"
+    },
+    "author": "BMC Team",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/bfg-dev/atx-contract-client/issues"
+    },
+    "homepage": "https://github.com/bfg-dev/atx-contract-client",
+    "dependencies": {
+        "abi-decoder": "^1.0.9",
+        "bignumber": "*",
+        "bs58": "^4.0.1",
+        "buffer": "^5.0.6",
+        "bmc-contract": "git+https://github.com/bfg-dev/bmc-contract.git#feature/ftx-token"
+    },
+    "devDependencies": {
+        "truffle": "4.1.3",
+        "ganache-cli": "6.1.0",
+        "truffle-contract": "^3.0.4",
+        "truffle-hdwallet-provider": "mikefluff/truffle-hdwallet-provider#7a2eccca1ba17c235a3ef258914ca74ea5f13014",
+        "csv-parse": "^1.2.1",
+        "csv-writer": "^0.0.3",
+        "q": "^1.5.0",
+        "eslint": "4",
+        "solium": "1.1",
+        "babel-eslint": "^8.2.1",
+        "babel-preset-es2015": "^6.24.1",
+        "babel-register": "^6.24.1",
+        "ethereumjs-wallet": "0.6.0",
+        "standard-version": "^4.0.0"
+    }
+}
